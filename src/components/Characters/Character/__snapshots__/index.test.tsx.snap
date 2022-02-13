@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Character/> It renders correctly 1`] = `
+<li
+  className="character"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      name="id"
+      onBlur={[Function]}
+      onChange={[Function]}
+      type="hidden"
+    />
+    <fieldset>
+      <div
+        className="character__entry"
+      >
+        <label
+          className="character__label"
+          htmlFor="name-0"
+        >
+          Name:
+        </label>
+        <input
+          className="form-control character__input"
+          defaultValue="my name"
+          id="name-0"
+          name="name"
+          onBlur={[Function]}
+          onChange={[Function]}
+          type="text"
+        />
+      </div>
+      <div
+        className="character__entry"
+      >
+        <label
+          className="character__label"
+          htmlFor="birth-year-0"
+        >
+          Date of birth:
+        </label>
+        <input
+          className="form-control character__input"
+          defaultValue="my date of birth"
+          id="birth-year-0"
+          name="birthYear"
+          onBlur={[Function]}
+          onChange={[Function]}
+          type="text"
+        />
+      </div>
+      <div
+        className="character__entry"
+      >
+        <label
+          className="character__label"
+          htmlFor="gender-0"
+        >
+          Gender:
+        </label>
+        <input
+          className="form-control character__input"
+          defaultValue="my gender"
+          id="gender-0"
+          name="gender"
+          onBlur={[Function]}
+          onChange={[Function]}
+          type="text"
+        />
+      </div>
+      <div
+        className="character__entry"
+      >
+        <label
+          className="character__label"
+          htmlFor="height-0"
+        >
+          Height:
+        </label>
+        <input
+          className="form-control character__input"
+          defaultValue={182}
+          id="height-0"
+          name="height"
+          onBlur={[Function]}
+          onChange={[Function]}
+          type="text"
+        />
+      </div>
+    </fieldset>
+    <div
+      className="btn__group btn__group--inverse"
+    >
+      <span
+        className="character__updated"
+      >
+        Character updated successfully!
+      </span>
+      <button
+        className="btn btn--edit"
+        type="submit"
+      >
+        Edit
+      </button>
+      <button
+        className="btn btn--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </div>
+  </form>
+  <Notes
+    id={0}
+    notes={Array []}
+  />
+</li>
+`;
