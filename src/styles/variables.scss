@@ -1,0 +1,29 @@
+// Colors
+$white: #fff;
+$black: #000;
+// Star Wars Color scheme created with colorswall https://colorswall.com/palette/19345/
+$color_1: #e89e10;
+$color_2: #8ed8fc;
+$color_3: #9f0613;
+$color_4: #54ad7a;
+$color_5: #a8c2c2;
+$color_6: #2e4558;
+
+$body-background-color: $color_5;
+$border-color: $color_6;
+
+// measures
+$layout-header-h: 80px;
+$layout-sidebar-w: 200px;
+
+// media query break points
+$media-query-xm: 320px;
+$media-query-sm: 576px; // modern mobiles phones
+
+// GUTTERING
+$gap-sm: 10px;
+$gap-md: 15px;
+$gap-lg: 20px;
+
+// form
+$label-w: 100px;

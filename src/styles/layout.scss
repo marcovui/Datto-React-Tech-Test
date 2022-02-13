@@ -1,0 +1,64 @@
+.layout {
+	display: flex;
+  flex-direction: column;
+	height: 100vh;
+	min-width: $media-query-xm;
+	&__header {
+		display: flex;
+    align-items: center;
+		height: $layout-header-h;
+		padding: 5px;
+		background: $white;
+		border-bottom: 2px solid $border-color;
+	}
+	&__logo-link {
+		display: inline-block;
+    height: auto;
+    width: 100px;
+	}
+	&__logo {
+		max-height: 100%;
+		width: 100px;
+	}
+	@media only screen and (min-width: $media-query-sm) {
+		&__logo-link {
+			height: 100%;
+			width: auto;
+		}
+		&__logo {
+    	width: auto;
+		}
+	}
+	&__content {
+		flex-grow: 1;
+		display: flex;
+		overflow: hidden;
+	}
+	&__sidebar {
+		width: $layout-sidebar-w;
+		min-width: $layout-sidebar-w;
+		overflow: hidden;
+		background: $black;
+		border-right: 2px solid $border-color;
+		display: none;
+		@media only screen and (min-width: $media-query-sm) {
+			display: block;
+		}
+	}
+	&__main {
+		flex-grow: 1;
+		overflow: auto;
+		padding: $gap-lg;
+	}
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100px;
+		min-height: 100px;
+		padding: $gap-lg;
+		color: $white;
+		background: $color_3;
+		border-top: 2px solid $border-color;
+	}
+}

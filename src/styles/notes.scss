@@ -1,0 +1,28 @@
+.create-note {
+  display: flex;
+  margin-bottom: $gap-lg;
+  &__input {
+    flex: 1 0 auto;
+    margin-right: $gap-lg;
+  }
+}
+
+.notes-list {
+  list-style: none;
+  padding-left: 25px;
+  &__item {
+    font-size: .85em;
+    margin-bottom: $gap-md;
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+    &:before {
+      content: "\2022";
+      color: $color_3;
+      font-weight: bold;
+      display: inline-block; 
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+}

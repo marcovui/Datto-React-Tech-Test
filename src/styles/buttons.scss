@@ -1,0 +1,30 @@
+.btn {
+  border: none;
+  padding: $gap-sm;
+  border-radius: 4px;
+  @include btn-color($black, $color_5);
+  &--add {
+    @include btn-color($white, $color_4);
+  }
+  &--edit {
+    @include btn-color($white, $color_6);
+  }
+  &--delete {
+    @include btn-color($white, $color_3);
+  }
+  &__group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: $gap-lg;
+    > .btn {
+      margin: 0 $gap-sm 0 0;
+    }
+    &--inverse {
+      justify-content: flex-end;
+      > .btn {
+        margin: 0 0 0 $gap-sm;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.characters {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: $gap-lg;
+  background: $white;
+	border: 1px solid $color_6;
+	&__error {
+		text-align: center;
+		color: $color_3;
+	}
+	&__title {
+		border-bottom: 2px solid $color_3;
+	}
+	&__list {
+		list-style: none;
+    margin: 0;
+    padding: 0;
+	}
+}
