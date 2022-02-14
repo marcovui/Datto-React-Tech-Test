@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 import { editCharacter, deleteCharacter } from 'store/characters';
 
-import { Character as CharacterType } from 'store/characters/types';
+import { Character as CharacterType, FormValues } from 'store/characters/types';
 
 import { Notes } from '../Notes';
 
@@ -24,7 +24,7 @@ export const Character: React.FC<CharacterType> = ({
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm();
+  } = useForm<FormValues>();
 
   useEffect(() => {
     if (!isUpdated) return;
@@ -34,8 +34,14 @@ export const Character: React.FC<CharacterType> = ({
     }, 5000);
   }, [isUpdated]);
 
-  const onSubmit = (data: any) => {
-    dispatch(editCharacter(data));
+  const onSubmit = ({ height, ...rest }: FormValues) => {
+    dispatch(
+      editCharacter({
+        id,
+        ...rest,
+        height: parseInt(height, 10),
+      })
+    );
     // setting the state of the updated character manually
     // as there is no need to save data in DB for the exercise.
     setIsUpdated(true);
@@ -44,7 +50,6 @@ export const Character: React.FC<CharacterType> = ({
   return (
     <li className="character">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="hidden" {...register('id')} defaultValue={id} />
         <fieldset>
           <div className="character__entry">
             <label className="character__label" htmlFor={`name-${id}`}>
@@ -95,8 +100,7 @@ export const Character: React.FC<CharacterType> = ({
               {/* 
                 the option values here should be of type number.
                 For the purpose of this exercise I am just going
-                to use the values associated with property gender
-                (female, male and n/a). 
+                to use the values associated with property gender ("female", "male" and "n/a"). 
               */}
               <option value="female">female</option>
               <option value="male">male</option>

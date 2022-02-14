@@ -33,7 +33,7 @@ const slice = createSlice({
         (character) => character.id !== action.payload
       );
     },
-    editCharacter(state, action: PayloadAction<Character>) {
+    editCharacter(state, action: PayloadAction<Omit<Character, 'notes'>>) {
       const { id } = action.payload;
       state.list = state.list.map((character) => {
         const { id: characterId, notes } = character;

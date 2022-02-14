@@ -1,6 +1,15 @@
-export interface Id {
+export type Gender = 'femal' | 'male' | 'n/a';
+
+export type FormValues = {
+  height: string;
+  birthYear: string;
+  name: string;
+  gender: Gender;
+};
+
+export type Id = {
   id: number;
-}
+};
 
 export interface Note {
   text: string;
