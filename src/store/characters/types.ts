@@ -1,4 +1,4 @@
-export type Gender = 'femal' | 'male' | 'n/a';
+export type Gender = 'female' | 'male' | 'n/a';
 
 export type FormValues = {
   height: string;
@@ -21,7 +21,7 @@ export interface NoteItem extends Id {
 
 export interface PartialCharacter {
   name: string;
-  gender: 'femal' | 'male' | 'n/a';
+  gender: Gender;
   height: number;
 }
 

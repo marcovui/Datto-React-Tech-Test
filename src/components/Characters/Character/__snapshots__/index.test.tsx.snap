@@ -57,7 +57,7 @@ exports[`<Character/> It renders correctly 1`] = `
         </label>
         <select
           className="form-control character__input"
-          defaultValue="my gender"
+          defaultValue="female"
           id="gender-0"
           name="gender"
           onBlur={[Function]}
