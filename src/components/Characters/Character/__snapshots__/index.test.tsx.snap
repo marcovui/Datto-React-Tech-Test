@@ -7,12 +7,6 @@ exports[`<Character/> It renders correctly 1`] = `
   <form
     onSubmit={[Function]}
   >
-    <input
-      name="id"
-      onBlur={[Function]}
-      onChange={[Function]}
-      type="hidden"
-    />
     <fieldset>
       <div
         className="character__entry"
@@ -61,15 +55,30 @@ exports[`<Character/> It renders correctly 1`] = `
         >
           Gender:
         </label>
-        <input
+        <select
           className="form-control character__input"
           defaultValue="my gender"
           id="gender-0"
           name="gender"
           onBlur={[Function]}
           onChange={[Function]}
-          type="text"
-        />
+        >
+          <option
+            value="female"
+          >
+            female
+          </option>
+          <option
+            value="male"
+          >
+            male
+          </option>
+          <option
+            value="n/a"
+          >
+            n/a
+          </option>
+        </select>
       </div>
       <div
         className="character__entry"
