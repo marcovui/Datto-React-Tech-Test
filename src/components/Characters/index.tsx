@@ -34,8 +34,8 @@ export const Characters: React.FC<{}> = () => {
             <div>Loading...</div>
           ) : (
             <ul className="characters__list">
-              {charactersList.map(({ ...rest }, index) => (
-                <Character key={`character-form${index}`} {...rest} />
+              {charactersList.map(({ id, ...rest }) => (
+                <Character key={`character-form${id}`} id={id} {...rest} />
               ))}
             </ul>
           )}

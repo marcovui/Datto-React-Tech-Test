@@ -24,12 +24,7 @@ export const Character: React.FC<CharacterType> = ({
     register,
     formState: { errors },
     handleSubmit,
-    reset,
   } = useForm();
-
-  useEffect(() => {
-    reset({ id, name, birthYear, gender, height });
-  }, [id]);
 
   useEffect(() => {
     if (!isUpdated) return;
