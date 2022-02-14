@@ -12,7 +12,7 @@ export interface NoteItem extends Id {
 
 export interface PartialCharacter {
   name: string;
-  gender: string;
+  gender: 'femal' | 'male' | 'n/a';
   height: number;
 }
 

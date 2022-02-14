@@ -44,7 +44,7 @@ export const Character: React.FC<CharacterType> = ({
   return (
     <li className="character">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="hidden" {...register('id')} />
+        <input type="hidden" {...register('id')} defaultValue={id} />
         <fieldset>
           <div className="character__entry">
             <label className="character__label" htmlFor={`name-${id}`}>
@@ -84,15 +84,24 @@ export const Character: React.FC<CharacterType> = ({
             <label className="character__label" htmlFor={`gender-${id}`}>
               Gender:
             </label>
-            <input
-              type="text"
+            <select
               className={`form-control character__input${
                 errors.gender ? ' form-control--error' : ''
               }`}
               id={`gender-${id}`}
               {...register('gender', { required: true })}
               defaultValue={gender}
-            />
+            >
+              {/* 
+                the option values here should be of type number.
+                For the purpose of this exercise I am just going
+                to use the values associated with property gender
+                (female, male and n/a). 
+              */}
+              <option value="female">female</option>
+              <option value="male">male</option>
+              <option value="n/a">n/a</option>
+            </select>
             {errors.gender && (
               <div className="invalid-feedback">Gender is required</div>
             )}
